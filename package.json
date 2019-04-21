@@ -1,0 +1,17 @@
+{
+  "name": "vocoder",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "owc-dev-server app",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build": "tsc",
+    "build:watch": "npm run build -- --watch"
+  },
+  "author": "cletusw@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "owc-dev-server": "^0.3.0",
+    "typescript": "^3.4.4"
+  }
+}
