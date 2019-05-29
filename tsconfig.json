@@ -16,7 +16,7 @@
     // "types": [],                           /* Type declaration files to be included in compilation. */
 
     /* Source Map Options */
-    "sourceMap": true,
+    // "sourceMap": true,
     // "sourceRoot": "./",                    /* Specify the location where debugger should locate TypeScript files instead of source locations. */
     // "mapRoot": "./",                       /* Specify the location where debugger should locate map files instead of generated locations. */
     // "inlineSourceMap": true,               /* Emit a single file with source maps instead of having a separate file. */

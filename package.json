@@ -11,7 +11,7 @@
   "author": "cletusw@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "owc-dev-server": "^0.3.0",
-    "typescript": "^3.4.4"
+    "owc-dev-server": "^0.4.3",
+    "typescript": "^3.5.1"
   }
 }
