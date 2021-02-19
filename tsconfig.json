@@ -3,9 +3,9 @@
     /* Basic Options */
     "target": "esnext",
     "module": "esnext",
-    "outDir": "app/built",                    /* Redirect output structure to the directory. */
+    // "outDir": "app",                    /* Redirect output structure to the directory. */
     // "rootDir": "./src",                    /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
-    // "isolatedModules": true,               /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
+    "isolatedModules": true,               /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
     // "strict": true,
 
     /* Module Resolution Options */
@@ -16,7 +16,7 @@
     // "types": [],                           /* Type declaration files to be included in compilation. */
 
     /* Source Map Options */
-    // "sourceMap": true,
+    "sourceMap": true,
     // "sourceRoot": "./",                    /* Specify the location where debugger should locate TypeScript files instead of source locations. */
     // "mapRoot": "./",                       /* Specify the location where debugger should locate map files instead of generated locations. */
     // "inlineSourceMap": true,               /* Emit a single file with source maps instead of having a separate file. */

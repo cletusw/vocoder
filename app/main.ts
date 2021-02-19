@@ -1,4 +1,5 @@
 import { AudioVisualizer } from "./visualizer";
+import "./visualizer"; // for side effects
 
 console.clear();
 
@@ -21,7 +22,7 @@ const analyser = audioContext.createAnalyser();
 analyser.minDecibels = -90;
 analyser.maxDecibels = -10;
 analyser.smoothingTimeConstant = 0.85;
-analyser.fftSize = 256;
+analyser.fftSize = 512;
 var bufferLength = analyser.frequencyBinCount;
 
 // connect our graph
@@ -59,15 +60,37 @@ var dataArray = new Float32Array(bufferLength);
 
 const visualizer = document.querySelector('.visualizer') as AudioVisualizer;
 
+let counter = 0;
+
 function draw() {
   requestAnimationFrame(draw);
 
   analyser.getFloatFrequencyData(dataArray);
 
   visualizer.render(dataArray);
+
+  if (++counter > 60 * 5) {
+    counter = 0;
+    console.log(dataArray);
+
+    const loudestFrequencyBinIndex = findLoudestFrequencyBin(dataArray);
+    console.log(loudestFrequencyBinIndex, dataArray[loudestFrequencyBinIndex]);
+  }
 };
 
 draw();
+
+function findLoudestFrequencyBin(dataArray: Float32Array) {
+  let maxValue = -Infinity;
+  let maxIndex = -1;
+  for (let i = 0; i < dataArray.length; i++) {
+    if (dataArray[i] > maxValue) {
+      maxValue = dataArray[i];
+      maxIndex = i;
+    }
+  }
+  return maxIndex;
+}
 
 
 
